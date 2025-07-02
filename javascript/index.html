@@ -14,7 +14,30 @@
     <label for="nomeInput">Nome: </label>
     <input type="text" id="nomeInput" placeholder="Apenas nome">
     <button type="submit" id="botaoBemVindo">Clique aqui</button>
+  </section>
+  <section id="calculadora">
+    <h2>calculadora</h2>
+    <label for="operacaoSelect">Escolha a operação:</label>
+    <select id="operacaoSelect" name="select">
+      <option value="soma">Soma</option>
+      <option value="subtracao">Subtração</option>
+      <option value="divisao">Divisao</option>
+      <option value="mutiplicacao">Mutiplicação</option>
+    </select>
+    <br><br>
 
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" placeholder="Primeiro Número">
+    <br><br>
+
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" placeholder="Segundo Número">
+    <br><br>
+
+    <button id="calcularBtn">calcular</button>
+    <br><br>
+
+    <p>Resultado: <span id="resultadoCalculadora"></span></p>
   </section>
 
   <script src="script.js"></script>
