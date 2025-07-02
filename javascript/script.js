@@ -54,8 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(resultado);
         break;
       case 'divisao':
-        resultado = num1 / num2; alert(`A divisão de ${num1} / ${num2} é ${resultado}`);
+        if (num2 === 0) {
+          resultadoCalculadora.innerText = "Não é possível dividir por zero!";
+          alert("Erro: Divisão por zero não é permitida!");
+          return;
+        }
+        resultado = num1 / num2;
         console.log(resultado);
+        alert(`A divisão de ${num1} / ${num2} é ${resultado}`);
         break;
       case 'mutiplicacao':
         resultado = num1 * num2; alert(`A mutiplicação de ${num1} * ${num2} é ${resultado}`);
