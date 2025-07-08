@@ -13,3 +13,15 @@ cep.onkeyup = () => {
       })
   }
 }
+
+function buscarRegioes() {
+  fetch("https://servicodados.ibge.gov.br/api/v1/localidades/regioes")
+    .then(res => res.json())
+    .then(res => {
+      res.map(regiao => {
+        regioes.innerHTML += `<option>${regiao.nome}</option>`;
+      })
+    })
+}
+
+buscarRegioes();
